@@ -22,7 +22,7 @@ function getVoice12_00_00()
 
 function getVoice12_00_10()
 {
-	return '';
+	return 'https://rawgithub.com/duluong/fjpAnnounce/master/fjpAnnounce/Sounds/Bells1.mp3';
 }
 
 function getVoice12_00_20()
@@ -38,7 +38,7 @@ function getVoice18_00_00()
 
 function getVoice18_00_10()
 {
-	return '';
+	return 'https://rawgithub.com/duluong/fjpAnnounce/master/fjpAnnounce/Sounds/Bells1.mp3';
 }
 
 function getVoice18_00_20()
