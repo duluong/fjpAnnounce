@@ -1,24 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script src="https://rawgithub.com/duluong/Announce/master/Voice.js"></script>
+<!-- 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+ -->
+ 
+<script src="https://rawgithub.com/duluong/fjpAnnounce/master/fjpAnnounce/Scripts/voice.js"></script>
+
 <script>
 function start()
 {
-	var audio = document.getElementById("Audio1");
-	audio.play();
+	playAudio1();
 }
 
-function playTTS()
+function playAudio1()
 {	
-	var audio = document.getElementById("Audio2");
-	audio.src = getVoice09();
-	audio.play();
+	var audio = document.getElementById("Audio1");
+	audio.src = getVoice12_00_00();
+	audio.oncanplay = audio.play();
+	if (audio.src == ''){
+		Audio1End();
+	}
 }
 
 function Audio1End()
 {
-	playTTS();
+	playAudio2();
+}
+
+function playAudio2()
+{	
+	var audio = document.getElementById("Audio2");
+	audio.src = getVoice12_00_10();
+	audio.oncanplay = audio.play();
+	if (audio.src == ''){
+		Audio2End();
+	}
 }
 
 function Audio2End()
@@ -27,19 +44,24 @@ function Audio2End()
 }
 
 </script>
+
+<script>
+
+</script>
+
+
 </head>
 
 <body onload="start();">
 
 <audio controls id="Audio1" onended="Audio1End()">
-  <source src="https://rawgithub.com/duluong/HtmlPrac/master/HtmlPrac/audio/0.wav" 
-	type="audio/mpeg">
-Your browser does not support the audio element.
+  <source src="" type="audio/mpeg">
+	Your browser does not support the audio element.
 </audio>
 
 <audio controls id="Audio2" onended="Audio2End()">
   <source src="" type="audio/mpeg">
-Your browser does not support the audio element.
+	Your browser does not support the audio element.
 </audio>
 
 <body>
