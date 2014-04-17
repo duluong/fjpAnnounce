@@ -1,7 +1,7 @@
 // 9 o'clock announce sound
 function getVoice09-00-00()
 {
-	return 'https://rawgithub.com/duluong/HtmlPrac/master/HtmlPrac/audio/0.wav';
+	return 'https://rawgithub.com/duluong/fjpAnnounce/master/fjpAnnounce/Sounds/mantle_clock_chimes_12_clockwork_sounds_and_quick_ticking.mp3'
 }
 
 function getVoice09-00-10()
@@ -17,7 +17,7 @@ function getVoice09-00-20()
 //12 o'clock announce sound
 function getVoice12-00-00()
 {
-	return 'https://rawgithub.com/duluong/HtmlPrac/master/HtmlPrac/audio/0.wav';
+	return 'https://rawgithub.com/duluong/fjpAnnounce/master/fjpAnnounce/Sounds/Bells1.mp3';
 }
 
 function getVoice12-00-10()
@@ -33,7 +33,7 @@ function getVoice12-00-20()
 //18 o'clock announce sound
 function getVoice18-00-00()
 {
-	return 'https://rawgithub.com/duluong/HtmlPrac/master/HtmlPrac/audio/0.wav';
+	return 'https://rawgithub.com/duluong/fjpAnnounce/master/fjpAnnounce/Sounds/Bells1.mp3';
 }
 
 function getVoice18-00-10()
@@ -49,7 +49,7 @@ function getVoice18-00-20()
 //20 o'clock announce sound
 function getVoice20-00-00()
 {
-	return 'https://rawgithub.com/duluong/HtmlPrac/master/HtmlPrac/audio/0.wav';
+	return 'https://rawgithub.com/duluong/fjpAnnounce/master/fjpAnnounce/Sounds/train-crossing-bell-train-crossing-fast-01.mp3';
 }
 function getVoice20-00-10()
 {
