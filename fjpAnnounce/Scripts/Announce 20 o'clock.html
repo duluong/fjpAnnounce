@@ -1,46 +1,89 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script src="https://rawgithub.com/duluong/fjpAnnounce/master/fjpAnnounce/Scripts/voice.js"></script>
 <script>
 function start()
 {
-	var audio = document.getElementById("Audio1");
-	audio.play();		
+	playAudio1();
 }
 
-function playTTS()
+function playAudio1()
 {	
-	var audio = document.getElementById("Audio2");
-	audio.src ='http://translate.google.com/translate_tts?ie=utf-8&tl=ja&q=%E7%9A%86%E3%81%95%E3%82%93%E3%80%8120%E6%99%82%E3%81%AB%E3%81%AA%E3%82%8A%E3%81%BE%E3%81%97%E3%81%9F%E3%80%82%E4%BB%95%E4%BA%8B%E3%82%92%E6%97%A9%E3%81%8F%E7%B5%82%E4%BA%86%E3%81%97%E3%81%A6%E5%B8%B0%E3%81%A3%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%80%82%0A%E7%B9%B0%E3%82%8A%E8%BF%94%E8%87%B4%E3%81%97%E3%81%BE%E3%81%99%E3%80%8220%E6%99%82%E3%81%AB%E3%81%AA%E3%82%8A%E3%81%BE%E3%81%97%E3%81%9F%E3%80%82%E4%BB%95%E4%BA%8B%E3%82%92%E6%97%A9%E3%81%8F%E7%B5%82%E4%BA%86%E3%81%97%E3%81%A6%E5%B8%B0%E3%81%A3%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%80%82';
-	audio.play();
-	
-	
+	var audio = document.getElementById("Audio1");
+	var srcvoice = getVoice20_00_00();
+
+	if (srcvoice == ''){
+		audio.onended();
+	}
+	else{
+		audio.src = srcvoice;
+		audio.oncanplay = audio.play();
+	}		
 }
 
 function Audio1End()
 {
-	playTTS();
+	playAudio2();
+}
+
+function playAudio2()
+{	
+	var audio = document.getElementById("Audio2");
+	var srcvoice = getVoice20_00_10();
+
+	if (srcvoice == ''){
+		audio.onended();
+	}
+	else{
+		audio.src = srcvoice;
+		audio.oncanplay = audio.play();
+	}
 }
 
 function Audio2End()
+{
+	playAudio3();
+}
+
+function playAudio3()
+{	
+	var audio = document.getElementById("Audio3");
+	var srcvoice = getVoice20_00_20();
+
+	if (srcvoice == ''){
+		audio.onended();
+	}
+	else{
+		audio.src = srcvoice;
+		audio.oncanplay = audio.play();
+	}
+}
+
+function Audio3End()
 {
 	window.close();
 }
 
 </script>
+
 </head>
 
 <body onload="start();">
 
 <audio controls id="Audio1" onended="Audio1End()">
-  <source src="C:\tasks\Sounds\train-crossing-bell-train-crossing-fast-01.mp3" 
-	type="audio/mpeg">
-Your browser does not support the audio element.
+  <source src="" type="audio/mpeg">
+	Your browser does not support the audio element.
 </audio>
 
 <audio controls id="Audio2" onended="Audio2End()">
   <source src="" type="audio/mpeg">
-Your browser does not support the audio element.
+	Your browser does not support the audio element.
+</audio>
+
+<audio controls id="Audio3" onended="Audio3End()">
+  <source src="" type="audio/mpeg">
+	Your browser does not support the audio element.
 </audio>
 
 <body>

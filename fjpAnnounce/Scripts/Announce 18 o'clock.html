@@ -1,36 +1,89 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script src="https://rawgithub.com/duluong/fjpAnnounce/master/fjpAnnounce/Scripts/voice.js"></script>
 <script>
-var playTimes = 0;
 function start()
 {
+	playAudio1();
+}
+
+function playAudio1()
+{	
 	var audio = document.getElementById("Audio1");
-	playTimes += 1; 
-	audio.play();		
+	var srcvoice = getVoice18_00_00();
+
+	if (srcvoice == ''){
+		audio.onended();
+	}
+	else{
+		audio.src = srcvoice;
+		audio.oncanplay = audio.play();
+	}		
 }
 
 function Audio1End()
 {
-	if (playTimes == 2)
-	{
-		window.close();
-		return;
+	playAudio2();
+}
+
+function playAudio2()
+{	
+	var audio = document.getElementById("Audio2");
+	var srcvoice = getVoice18_00_10();
+
+	if (srcvoice == ''){
+		audio.onended();
 	}
-	var audio = document.getElementById("Audio1");
-	playTimes += 1; 
-	audio.play();
+	else{
+		audio.src = srcvoice;
+		audio.oncanplay = audio.play();
+	}
+}
+
+function Audio2End()
+{
+	playAudio3();
+}
+
+function playAudio3()
+{	
+	var audio = document.getElementById("Audio3");
+	var srcvoice = getVoice18_00_20();
+
+	if (srcvoice == ''){
+		audio.onended();
+	}
+	else{
+		audio.src = srcvoice;
+		audio.oncanplay = audio.play();
+	}
+}
+
+function Audio3End()
+{
+	window.close();
 }
 
 </script>
+
 </head>
 
 <body onload="start();">
 
 <audio controls id="Audio1" onended="Audio1End()">
-  <source src="C:\tasks\Sounds\Bells1.mp3" 
-	type="audio/mpeg">
-Your browser does not support the audio element.
+  <source src="" type="audio/mpeg">
+	Your browser does not support the audio element.
+</audio>
+
+<audio controls id="Audio2" onended="Audio2End()">
+  <source src="" type="audio/mpeg">
+	Your browser does not support the audio element.
+</audio>
+
+<audio controls id="Audio3" onended="Audio3End()">
+  <source src="" type="audio/mpeg">
+	Your browser does not support the audio element.
 </audio>
 
 <body>

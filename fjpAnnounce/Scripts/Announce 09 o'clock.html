@@ -1,12 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<!-- 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
- -->
- 
 <script src="https://rawgithub.com/duluong/fjpAnnounce/master/fjpAnnounce/Scripts/voice.js"></script>
-
 <script>
 function start()
 {
@@ -15,13 +10,14 @@ function start()
 
 function playAudio1()
 {	
-	var audio = document.getElementById("Audio1");	
+	var audio = document.getElementById("Audio1");
+	var srcvoice = getVoice09_00_00();
 
-	if (getVoice12_00_00() == ''){
+	if (srcvoice == ''){
 		audio.onended();
 	}
 	else{
-		audio.src = getVoice12_00_00();
+		audio.src = srcvoice;
 		audio.oncanplay = audio.play();
 	}		
 }
@@ -34,27 +30,42 @@ function Audio1End()
 function playAudio2()
 {	
 	var audio = document.getElementById("Audio2");
+	var srcvoice = getVoice09_00_10();
 
-	if (getVoice12_00_10() == ''){
+	if (srcvoice == ''){
 		audio.onended();
 	}
 	else{
-		audio.src = getVoice12_00_10();
+		audio.src = srcvoice;
 		audio.oncanplay = audio.play();
 	}
 }
 
 function Audio2End()
 {
+	playAudio3();
+}
+
+function playAudio3()
+{	
+	var audio = document.getElementById("Audio3");
+	var srcvoice = getVoice09_00_20();
+
+	if (srcvoice == ''){
+		audio.onended();
+	}
+	else{
+		audio.src = srcvoice;
+		audio.oncanplay = audio.play();
+	}
+}
+
+function Audio3End()
+{
 	window.close();
 }
 
 </script>
-
-<script>
-
-</script>
-
 
 </head>
 
@@ -66,6 +77,11 @@ function Audio2End()
 </audio>
 
 <audio controls id="Audio2" onended="Audio2End()">
+  <source src="" type="audio/mpeg">
+	Your browser does not support the audio element.
+</audio>
+
+<audio controls id="Audio3" onended="Audio3End()">
   <source src="" type="audio/mpeg">
 	Your browser does not support the audio element.
 </audio>
