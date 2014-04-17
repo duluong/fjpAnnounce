@@ -15,16 +15,15 @@ function start()
 
 function playAudio1()
 {	
-	var audio = document.getElementById("Audio1");
-	audio.src = getVoice12_00_00();
+	var audio = document.getElementById("Audio1");	
 
-	if (audio.src == ' '){
+	if (getVoice12_00_00() == ''){
 		audio.onended();
 	}
 	else{
+		audio.src = getVoice12_00_00();
 		audio.oncanplay = audio.play();
-	}
-		
+	}		
 }
 
 function Audio1End()
@@ -35,12 +34,12 @@ function Audio1End()
 function playAudio2()
 {	
 	var audio = document.getElementById("Audio2");
-	audio.src = getVoice12_00_10();
 
-	if (audio.src == ' '){
+	if (getVoice12_00_10() == ''){
 		audio.onended();
 	}
 	else{
+		audio.src = getVoice12_00_10();
 		audio.oncanplay = audio.play();
 	}
 }

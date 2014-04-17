@@ -11,7 +11,7 @@ function getVoice09_00_10()
 
 function getVoice09_00_20()
 {
-	return ' ';
+	return '';
 }
 
 //12 o'clock announce sound
@@ -22,12 +22,12 @@ function getVoice12_00_00()
 
 function getVoice12_00_10()
 {
-	return ' ';
+	return '';
 }
 
 function getVoice12_00_20()
 {
-	return ' ';
+	return '';
 }
 
 //18 o'clock announce sound
@@ -38,12 +38,12 @@ function getVoice18_00_00()
 
 function getVoice18_00_10()
 {
-	return ' ';
+	return '';
 }
 
 function getVoice18_00_20()
 {
-	return ' ';
+	return '';
 }
 
 //20 o'clock announce sound
@@ -58,5 +58,5 @@ function getVoice20_00_10()
 
 function getVoice20_00_20()
 {
-	return ' ';
+	return '';
 }
