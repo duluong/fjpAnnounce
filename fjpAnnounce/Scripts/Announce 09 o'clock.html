@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://rawgithub.com/duluong/Announce/master/Voice.js"></script>
+<script>
+function start()
+{
+	var audio = document.getElementById("Audio1");
+	audio.play();
+}
+
+function playTTS()
+{	
+	var audio = document.getElementById("Audio2");
+	audio.src = getVoice09();
+	audio.play();
+}
+
+function Audio1End()
+{
+	playTTS();
+}
+
+function Audio2End()
+{
+	window.close();
+}
+
+</script>
+</head>
+
+<body onload="start();">
+
+<audio controls id="Audio1" onended="Audio1End()">
+  <source src="https://rawgithub.com/duluong/HtmlPrac/master/HtmlPrac/audio/0.wav" 
+	type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+
+<audio controls id="Audio2" onended="Audio2End()">
+  <source src="" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+
+<body>
+</html>

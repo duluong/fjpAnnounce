@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+var playTimes = 0;
+function start()
+{
+	var audio = document.getElementById("Audio1");
+	playTimes += 1; 
+	audio.play();		
+}
+
+function Audio1End()
+{
+	if (playTimes == 2)
+	{
+		window.close();
+		return;
+	}
+	var audio = document.getElementById("Audio1");
+	playTimes += 1; 
+	audio.play();
+}
+
+</script>
+</head>
+
+<body onload="start();">
+
+<audio controls id="Audio1" onended="Audio1End()">
+  <source src="C:\tasks\Sounds\Bells1.mp3" 
+	type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+
+<body>
+</html>
